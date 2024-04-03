@@ -5,9 +5,6 @@ from faster_whisper import WhisperModel
 import os
 import time
 
-NEON_GREEN = '\033[92m'
-RESET_COLOR = '\033[0m'
-
 def transcribe_chunk(model, file_path):
     segments, info = model.transcribe(file_path, beam_size=5)
     transcription = ' '.join(segment.text for segment in segments)
@@ -29,7 +26,7 @@ def record_chunk(p, stream, file_path, chunk_length=1):
 def transcribe_file(model, file_path):
     print(f"Transcribing file: {file_path}")
     transcription = transcribe_chunk(model, file_path)
-    print(NEON_GREEN + transcription + RESET_COLOR)
+    print(transcription)
     return transcription
 
 def main2():
@@ -60,7 +57,7 @@ def main2():
                 chunk_file = "temp_chunk.wav"
                 record_chunk(p, stream, chunk_file)
                 transcription = transcribe_chunk(model, chunk_file)
-                print(NEON_GREEN + transcription + RESET_COLOR)
+                print(transcription)
                 os.remove(chunk_file)
                 
                 # Append the new transcription to the accumulated transcription
