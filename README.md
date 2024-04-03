@@ -3,5 +3,4 @@ The initial idea for this voice assistant was to be able to have a natural conve
 
 ## Breaking down the challenge
 - [ ] One
-[ ] - two
-* [ ] three
+- [x] three
