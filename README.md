@@ -21,7 +21,11 @@ Python library to allow for audio to be captured either live from a microphone o
 
 ### Natural conversation
 
+content to be added
+
 ### Narrative script generation
+
+content to be added
 
 ### PowerPoint slide generation
 
