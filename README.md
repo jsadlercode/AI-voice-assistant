@@ -4,7 +4,7 @@ The initial idea for this voice assistant was to be able to have a natural conve
 ## Breaking down the challenge
 This idea can be broken down into the following components, each of which has some difficulty to it:
 
-- [ ] Speech to speech interaction
+- [x] Speech to speech interaction
 - [ ] A more natural conversation that includes lots of back and forth
 - [ ] Generation of the script for the AI assistant to narrate
 - [ ] Generation of a good powerpoint slide by the AI assistant
@@ -17,6 +17,8 @@ This idea can be broken down into the following components, each of which has so
 Great open source speech recognition model that can run locally.
 - PyAudio 
 Python library to allow for audio to be captured either live from a microphone or from a file and passed to something like Whisper for speech recognition to be performed.
+
+I tried PyAudio and other libraries locally on my Mac, but kept having issues. In the end, I relented and chose to use an online service called Deepgram to handle conversion between text and speech. I've then interfaced it with Groq due to it being much faster than other services. Though I may link it with a local LLM.
 
 
 ### Natural conversation
